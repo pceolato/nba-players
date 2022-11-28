@@ -14,7 +14,7 @@ export default function Page() {
                     </h1>
                     <p className="text-sm pb-8">Acompanhe informações</p>
                     <button 
-                        className="lg:w-full md:w-full sm:w-10 h-10 rounded bg-red-500 text-white font-medium"
+                        className="lg:w-full md:w-full h-10 rounded bg-red-500 text-white font-medium"
                     >
                         Confira todos jogadores
                     </button>
