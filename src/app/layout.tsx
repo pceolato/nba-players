@@ -1,4 +1,6 @@
-import { NavLink } from "./nav-link"
+import './globals.css';
+
+import { NavLink } from "../components/nav-link"
 
 export default function RootLayout({
   children,
