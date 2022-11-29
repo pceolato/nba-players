@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        '181': '45.25rem'
+      },
+
       fontFamily: {
         sans: 'DM Sans, sans-serif'
       },
@@ -31,5 +35,7 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 }

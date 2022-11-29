@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import { Cards } from './list-card'
 
 export default function Page() {
     return (
@@ -14,24 +16,29 @@ export default function Page() {
                     </h1>
                     <p className="text-sm pb-8">Acompanhe informações</p>
                     <button 
-                        className="lg:w-full md:w-full h-10 rounded bg-red-500 text-white font-medium"
+                        className="w-52 lg:w-full h-10 rounded bg-red-500 text-white font-medium hover:bg-red-300"
                     >
-                        Confira todos jogadores
+                        <Link
+                            href="https://www.nba.com/players"
+                            target="_blank"
+                        >
+                            Confira todos jogadores
+                        </Link>
                     </button>
                 </div>
 
                 <Image
                     src="/logo-nba.svg"
-                    alt="Logo NBA-PLAYERS"
+                    alt="Logo NBA"
                     width={86}
                     height={180}
                 />
             </section>
-            <div className="w-full flex">
+            <div className="w-full flex pb-9">
                 <div className="bg-white/20 w-full flex items-center p-4 rounded">
                     <Image
                         src="/search-icon.svg"
-                        alt="Logo NBA-PLAYERS"
+                        alt="Icone de busca"
                         width={30}
                         height={30}
                     />
@@ -42,6 +49,15 @@ export default function Page() {
                     />
                 </div>
             </div>
+            <section className="lg:w-181 m-auto pb-20">
+                <h1 className="text-center text-3xl text-white font-bold pb-4">Sobre a NBA</h1>
+                <p className="text-center">
+                    A National Basketball Association é a principal liga de basquetebol 
+                    profissional da América do Norte. Com 30 franquias, a NBA também é 
+                    considerada a principal liga de basquete do mundo.
+                </p>
+            </section>
+            <Cards />
         </main>
     )
 }
