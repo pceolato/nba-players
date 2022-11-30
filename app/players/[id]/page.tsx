@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { CardInfos } from '../card-infos';
+import { CardInfos } from './card-infos';
 
 // async function getUsers() {
 //     const res = await fetch(`https://www.balldontlie.io/api/v1/players/47`);

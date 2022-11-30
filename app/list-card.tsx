@@ -1,11 +1,6 @@
+import Link from "next/link";
 import { use } from "react";
 import { Card } from "./card";
-
-export interface Player {
-    id: string;
-    name: string;
-    team: string;
-}
 
 async function getPlayers() {
     try {
@@ -24,8 +19,6 @@ export function Cards() {
     
     return (
         <>
-            <h1 className="text-center font-bold text-white text-3xl">Jogadores</h1>
-            <p className="text-center pb-5 text-sm">Clique para mais informações</p>
             <div className="flex flex-wrap gap-y-8 justify-between">
                 {players?.map((player: any) => (
                     <Card 

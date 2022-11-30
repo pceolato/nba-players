@@ -1,11 +1,9 @@
-'use client'
 import './global.css';
 
 import { DM_Sans } from '@next/font/google'
 
 import Image from 'next/image'
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
 import { NavLink } from "./nav-link";
 
@@ -19,7 +17,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const pathname = usePathname();
 
   return (
     <html className={dmSans.className}>
@@ -34,7 +31,7 @@ export default function RootLayout({
           />
           <nav className="flex gap-4">
             <NavLink href="/">Home</NavLink>
-            <NavLink href={`${pathname}`}>{pathname === '/' ? '' : 'Jogador'}</NavLink>
+            <NavLink href="/players">Jogador</NavLink>
           </nav>
           <Link href="https://github.com/pceolato/nba-players">
             <Image

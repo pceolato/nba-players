@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { Input } from './input'
 import { Cards } from './list-card'
 
 export default function Page() {
@@ -22,7 +23,7 @@ export default function Page() {
                             href="https://www.nba.com/players"
                             target="_blank"
                         >
-                            Confira todos jogadores
+                            Mais sobre NBA
                         </Link>
                     </button>
                 </div>
@@ -34,21 +35,6 @@ export default function Page() {
                     height={180}
                 />
             </section>
-            <div className="w-full flex pb-9">
-                <div className="bg-white/20 w-full flex items-center p-4 rounded">
-                    <Image
-                        src="/search-icon.svg"
-                        alt="Icone de busca"
-                        width={30}
-                        height={30}
-                    />
-                    <input 
-                        type="text" 
-                        className="bg-transparent h-8 w-full pl-4 outline-0 text-white placeholder-white/60"
-                        placeholder="Procure pelo nome" 
-                    />
-                </div>
-            </div>
             <section className="lg:w-181 m-auto pb-20">
                 <h1 className="text-center text-3xl text-white font-bold pb-4">Sobre a NBA</h1>
                 <p className="text-center">
@@ -57,6 +43,10 @@ export default function Page() {
                     considerada a principal liga de basquete do mundo.
                 </p>
             </section>
+            <div className="pb-5 flex flex-col">
+                <h1 className="text-center font-bold text-white text-3xl">Jogadores</h1>
+                <Link href="/players" className="m-auto text-gray-300 text-sm hover:text-gray-200">Clique aqui para buscar por nome</Link>
+            </div>
             <Cards />
         </main>
     )
