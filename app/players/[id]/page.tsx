@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { CardInfos } from './card-infos';
@@ -47,7 +47,6 @@ export default function Page()  {
 
     }, [pathname])
 
-    console.log(player)
 
     return (
         <div className="max-w-3xl w-11/12 m-auto flex flex-col">
@@ -59,7 +58,7 @@ export default function Page()  {
                     width={70}
                     height={70}
                 />
-                <h1 className="text-4xl text-white font-bold text-center">{player.name || '...'}</h1>
+                <h1 className="text-4xl text-title font-bold text-center">{player.name || '...'}</h1>
                 <Image
                     className="hidden md:inline-block"
                     src="/bool-blue-lg.svg"
@@ -68,7 +67,7 @@ export default function Page()  {
                     height={70}
                 />
             </header>
-            <div className="w-full bg-gray-700 border border-orange-500 rounded">
+            <div className="w-full bg-card border border-orange-500 rounded">
                 <div className="p-6 flex flex-col gap-10">
                     <div className="flex justify-between">
                         <CardInfos title="Posição" description={player.position}/>

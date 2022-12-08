@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Input } from './input'
+
 import { Cards } from './list-card'
 
 export default function Page() {
@@ -11,7 +11,7 @@ export default function Page() {
             >
                 <div>
                     <h1
-                        className="text-white font-bold text-3xl pb-3.5"
+                        className="text-title font-bold text-3xl pb-3.5"
                     >
                         Conheça sobre jogadores <br/> da NBA
                     </h1>
@@ -36,7 +36,7 @@ export default function Page() {
                 />
             </section>
             <section className="lg:w-181 m-auto pb-20">
-                <h1 className="text-center text-3xl text-white font-bold pb-4">Sobre a NBA</h1>
+                <h1 className="text-center text-3xl text-title font-bold pb-4">Sobre a NBA</h1>
                 <p className="text-center">
                     A National Basketball Association é a principal liga de basquetebol 
                     profissional da América do Norte. Com 30 franquias, a NBA também é 
@@ -44,8 +44,8 @@ export default function Page() {
                 </p>
             </section>
             <div className="pb-5 flex flex-col">
-                <h1 className="text-center font-bold text-white text-3xl">Jogadores</h1>
-                <Link href="/players" className="m-auto text-gray-300 text-sm hover:text-gray-200">Clique aqui para buscar por nome</Link>
+                <h1 className="text-center font-bold text-title text-3xl">Jogadores</h1>
+                <Link href="/players" className="m-auto text-sm hover:text-gray-300 underline">Clique aqui para buscar por nome</Link>
             </div>
             <Cards />
         </main>

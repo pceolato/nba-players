@@ -2,9 +2,23 @@
 module.exports = {
   content: [
     "app/**/*.tsx",
+    "components/**/*.tsx"
   ],
   theme: {
     extend: {
+      backgroundColor: {
+        body: 'var(--color-bg-body)',
+        card: 'var(--color-bg-card)',
+        input: 'var(--color-bg-input)',
+        hoverCard: 'var(--color-bg-card-hover)',
+      },
+      textColor: {
+        title: 'var(--color-text-title)',
+        subtitle: 'var(--color-text-subtitle)'
+      },
+      borderWidth: {
+        cardBorder: 'var(--border-card)'
+      },
       spacing: {
         '181': '45.25rem'
       },

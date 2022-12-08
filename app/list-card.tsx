@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { use } from "react";
-import { Card } from "./card";
+import { Card } from "../components/Card";
 
 async function getPlayers() {
     try {
@@ -15,12 +14,11 @@ async function getPlayers() {
 }
 
 export function Cards() {
-    const players = use(getPlayers())
+    const players =  use(getPlayers());
     
     return (
-        <>
-            <div className="flex flex-wrap gap-y-8 justify-between">
-                {players?.map((player: any) => (
+            <div className="flex flex-wrap gap-8">
+                {players.map((player: any) => (
                     <Card 
                         key={player.id}
                         id={player.id}
@@ -29,6 +27,5 @@ export function Cards() {
                     />
                 ))}
             </div>
-        </>
     )
 }

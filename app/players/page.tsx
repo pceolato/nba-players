@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useState } from 'react';
-import { Card } from '../card';
+import { Card } from '../../components/Card';
 
 import { Alert } from "@material-tailwind/react";
 
@@ -54,7 +54,7 @@ export default function Page() {
                 Digite um nome
             </Alert>
             <div className="w-full flex gap-2 pb-8">
-                <div className="bg-white/20 w-full flex items-center p-4 rounded">
+                <div className="bg-input w-full flex items-center p-4 rounded">
                     <Image
                         src="/search-icon.svg"
                         alt="Icone de busca"
@@ -78,7 +78,7 @@ export default function Page() {
                     Buscar
                 </button>
             </div>
-            <div className="flex flex-wrap gap-y-8 justify-between">
+            <div className="flex flex-wrap gap-8">
                 {players?.map((player: any) => (
                     <Card
                         key={player.id}
