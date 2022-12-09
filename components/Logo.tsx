@@ -2,10 +2,10 @@
 
 import Image from 'next/image'
 import { useContext } from 'react';
-import { ThemeContext } from '../hooks/ThemeContext';
+import { ThemeContext, TypeThemeContext } from '../contexts/ThemeContext';
 
 export function Logo() {
-    const { theme } = useContext<any>(ThemeContext);
+    const { theme } = useContext<TypeThemeContext>(ThemeContext);
     return (
         <>
             {theme === 'dark' ?

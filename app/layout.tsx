@@ -5,8 +5,8 @@ import { DM_Sans } from '@next/font/google'
 import Link from 'next/link';
 
 import { NavLink } from "../components/Nav-link";
-import { ThemeProvider } from '../hooks/ThemeContext';
-import { Toggle } from './toggle';
+import { ThemeProvider } from '../contexts/ThemeContext';
+import { Toggle } from '../components/Toggle';
 import { GithubLink } from '../components/Github-link';
 import { Logo } from '../components/Logo';
 

@@ -2,14 +2,19 @@
 import { createContext, useEffect, useState } from 'react';
 
 interface ThemeProviderProps{
-    initialTheme: string | undefined;
+    initialTheme?: string;
     children: React.ReactNode;
 }
 
-const getInitialTheme = () => {
+export type TypeThemeContext = {
+    theme: string;
+    setTheme:(t: string) => void;
+}
+
+const getInitialTheme = () => { 
     if(localStorage) {
+        
         const storePrefs = localStorage.getItem('color-theme');
-        console.log('Tipo:', typeof storePrefs);
         if(typeof storePrefs === 'string') {
             return storePrefs;
         }
@@ -18,17 +23,17 @@ const getInitialTheme = () => {
         if(userMedia.matches) {
             return 'dark';
         }
-
-        return 'light';
     }
+
+    return 'dark';
 }
 
-export const ThemeContext = createContext({});
+export const ThemeContext = createContext<TypeThemeContext>({} as TypeThemeContext);
 
-export const ThemeProvider = ({initialTheme, children}: any) => {
+export const ThemeProvider = ({initialTheme, children}: ThemeProviderProps) => {
     const [theme, setTheme] = useState(getInitialTheme);
 
-    const rawSetTheme = (rawTheme: any) => {
+    const rawSetTheme = (rawTheme: string) => {
         const root = window.document.documentElement;
         const isDark = rawTheme === 'dark';
 

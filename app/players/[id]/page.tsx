@@ -6,12 +6,6 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { CardInfos } from './card-infos';
 
-// async function getUsers() {
-//     const res = await fetch(`https://www.balldontlie.io/api/v1/players/47`);
-//     const json = await res.json();
-
-// }
-
 interface PlayerProps {
     name: string;
     position: string;
@@ -23,7 +17,7 @@ interface PlayerProps {
 }
 
 export default function Page()  {
-    const [player, setPlayer] = useState({} as PlayerProps)
+    const [player, setPlayer] = useState<PlayerProps>({} as PlayerProps)
 
     const pathname = usePathname();
 
@@ -67,7 +61,7 @@ export default function Page()  {
                     height={70}
                 />
             </header>
-            <div className="w-full bg-card border border-orange-500 rounded">
+            <div className="w-full bg-card border rounded">
                 <div className="p-6 flex flex-col gap-10">
                     <div className="flex justify-between">
                         <CardInfos title="Posição" description={player.position}/>

@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+
 import { Player } from '../app/players/page';
 
 export function Card({name, team, id}: Player) {

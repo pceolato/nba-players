@@ -1,6 +1,15 @@
 import { use } from "react";
 import { Card } from "../components/Card";
 
+interface CardsProps {
+    id: string;
+    first_name: string;
+    last_name: string;
+    team: {
+        name: string;
+    }
+}
+
 async function getPlayers() {
     try {
         const res = await fetch(`https://www.balldontlie.io/api/v1/players`);
@@ -17,8 +26,8 @@ export function Cards() {
     const players =  use(getPlayers());
     
     return (
-            <div className="flex flex-wrap gap-8">
-                {players.map((player: any) => (
+            <div className="flex flex-wrap gap-8 mb-10">
+                {players.map((player: CardsProps) => (
                     <Card 
                         key={player.id}
                         id={player.id}

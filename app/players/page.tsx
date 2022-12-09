@@ -20,17 +20,16 @@ export default function Page() {
 
 
     async function getPlayers() {
+        const trimPlayer = searchPlayers.trim();
         try {
-            if (searchPlayers === '') {
+            if (searchPlayers === '' || trimPlayer.length === 0) {
                 setShow(true)
                 return;
             }
 
-            const trimPlayer = searchPlayers.trim();
-
             fetch(`https://www.balldontlie.io/api/v1/players/?search=${trimPlayer}`)
                 .then(res => res.json())
-                .then(data => data.data.length <= 0 ? alert('jogador não encontrado') : data.data)
+                .then(json => json.data.length <= 0 ? alert('jogador não encontrado') : json.data)
                 .then(data => setPlayers(data))
 
         } catch (err) {
