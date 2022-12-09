@@ -8,11 +8,11 @@ export function GithubLink() {
         <Link
             href="https://github.com/pceolato/nba-players">
                 <Image
-                    className="p-1"
+                    className=""
                     src="/github-logo.svg"
                     alt="Logo github"
-                    width={42}
-                    height={42}
+                    width={32}
+                    height={32}
                 />
 
         </Link>
