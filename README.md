@@ -25,6 +25,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <br/>
 
 <div style="display: flex; justify-content: space-between;">
-    <img style="" src="assets/nba-players-dark.png" width="47.5%;" alt="Imagem do projeto versão dark"/>
-    <img style="" src="assets/nba-players-light.png" width="47.5%;" alt="Imagem do projeto versão light"/>
+    <img style="" src="assets/nba-players-dark.png" width="45%;" alt="Imagem do projeto versão dark"/>
+    <img style="" src="assets/nba-players-light.png" width="45%;" alt="Imagem do projeto versão light"/>
 </div>
