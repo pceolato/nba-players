@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { Player } from '../app/players/page';
@@ -16,7 +16,7 @@ export function Card({name, team, id}: Player) {
                         <h3 className="text-left text-xl text-title font-bold">{ name }</h3>
                         <p className="text-left">{ team }</p>
                     </div>
-                    <Image
+                    <img
                         src="/bool-blue.svg"
                         alt="Bola de basquete azul"
                         width={40}

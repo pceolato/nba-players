@@ -29,7 +29,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/players" 
+    "src/app/players" 
   ],
   "exclude": [
     "node_modules"
