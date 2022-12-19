@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
 
   return (
-    <html className={dmSans.className}>
+    <html className={dmSans.className || 'font-sans'}>
         <head />
         <body className="scrollbar-hide bg-body text-subtitle">
           <ThemeProvider>
@@ -30,7 +30,7 @@ export default function RootLayout({
               <Logo />
               <nav className="flex gap-4">
                 <NavLink href="/">Home</NavLink>
-                <NavLink href="/players">Jogador</NavLink>
+                <NavLink href="/players" player>Jogador</NavLink>
               </nav>
               <div className="flex items-center gap-2">
               <Toggle />
