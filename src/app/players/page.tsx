@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Card } from '../../components/Card';
 
 import { Alert } from "@material-tailwind/react";
+import { SearchIcon } from '../../components/Search-icon';
 
 export interface Player {
     id: string;
@@ -53,16 +54,11 @@ export default function Page() {
                 Digite um nome
             </Alert>
             <div className="w-full flex gap-2 pb-8">
-                <div className="bg-input w-full flex items-center p-4 rounded">
-                    <Image
-                        src="/search-icon.svg"
-                        alt="Icone de busca"
-                        width={30}
-                        height={30}
-                    />
+                <div className="bg-input w-full flex items-center p-4 rounded border-inputBorder">
+                    <SearchIcon />
                     <input
                         type="text"
-                        className="bg-transparent h-8 w-full pl-4 outline-0 text-white placeholder-white/60"
+                        className="bg-transparent h-8 w-full pl-4 outline-0 text-title placeholder-phInput"
                         value={searchPlayers}
                         onChange={e => setSearchPlayers(e.target.value)}
                         onKeyDown={handleKeyDown}
@@ -70,8 +66,8 @@ export default function Page() {
                         placeholder="Procure pelo nome"
                     />
                 </div>
-                <button 
-                    className="w-2/6 bg-orange-500 hover:bg-orange-100 text-white text-lg font-medium rounded p-4"
+                <button
+                    className="w-2/6 bg-orange-500 hover:bg-orange-100 text-title text-lg font-medium rounded p-4"
                     onClick={getPlayers}
                 >
                     Buscar

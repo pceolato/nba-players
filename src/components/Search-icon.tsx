@@ -1,32 +1,29 @@
 'use client';
 
 import Image from 'next/image'
-import Link from 'next/link';
 import { useContext } from 'react';
 import { ThemeContext, TypeThemeContext } from '../contexts/ThemeContext';
 
-export function Logo() {
+export function SearchIcon() {
     const { theme } = useContext<TypeThemeContext>(ThemeContext);
     return (
-        <Link
-            href="/"
-        >
+        <>
             {theme === 'dark' ?
                 <Image
-                    src="/logo-white.svg"
+                    src="/search-icon-white.svg"
                     alt="Logo NBA-PLAYERS"
-                    width={81}
-                    height={46}
+                    width={30}
+                    height={30}
                 />
                 : <Image
-                    src="/logo-black.svg"
+                    src="/search-icon-black.svg"
                     alt="Logo NBA-PLAYERS"
-                    width={81}
-                    height={46}
+                    width={30}
+                    height={30}
                 />
 
             }
-        </Link>
+        </>
     )
 
 }

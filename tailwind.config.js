@@ -13,10 +13,14 @@ module.exports = {
       },
       textColor: {
         title: 'var(--color-text-title)',
-        subtitle: 'var(--color-text-subtitle)'
+        subtitle: 'var(--color-text-subtitle)',
+      },
+      placeholderColor: {
+        phInput: 'var(--color-placeholder-input)'
       },
       borderWidth: {
-        cardBorder: 'var(--border-card)'
+        cardBorder: 'var(--border-card)',
+        inputBorder: 'var(--border-input)'
       },
       spacing: {
         '181': '45.25rem'

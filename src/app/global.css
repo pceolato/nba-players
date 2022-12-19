@@ -3,6 +3,8 @@
     --color-bg-card: #212121;
     --color-bg-card-hover: #333333;
     --color-bg-input: rgb(249 249 249 / 0.2);
+    --color-placeholder-input: rgb(249 249 249 / 0.6);
+    --border-input: 0;
     --color-text-title: #f9f9f9;
     --color-text-subtitle: #828282;
     --border-card: 1px;
@@ -12,8 +14,9 @@
     --color-bg-body: #f9f9f9;
     --color-bg-card: #E3E3E3;
     --color-bg-card-hover: #C9C9C9;
+    --color-placeholder-input: rgb(23 23 23 / 0.6);
+    --border-input: 1px;
     --border-card: 0;
-    --color-bg-input: rgb(0 0 0 / 0.5);
     --color-text-title: #171717;
     --color-text-subtitle: #828282;
 }
