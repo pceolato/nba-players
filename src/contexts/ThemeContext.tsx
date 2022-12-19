@@ -13,12 +13,12 @@ export type TypeThemeContext = {
 
 const getInitialTheme = () => { 
     if(localStorage) {
-        
+
         const storePrefs = localStorage.getItem('color-theme');
         if(typeof storePrefs === 'string') {
             return storePrefs;
         }
-
+        
         const userMedia = window.matchMedia('(prefers-color-scheme: dark)');
         if(userMedia.matches) {
             return 'dark';
@@ -31,8 +31,8 @@ const getInitialTheme = () => {
 export const ThemeContext = createContext<TypeThemeContext>({} as TypeThemeContext);
 
 export const ThemeProvider = ({initialTheme, children}: ThemeProviderProps) => {
-    const [theme, setTheme] = useState(getInitialTheme);
-
+    const [theme, setTheme] = useState('');
+    
     const rawSetTheme = (rawTheme: string) => {
         const root = window.document.documentElement;
         const isDark = rawTheme === 'dark';
@@ -48,7 +48,15 @@ export const ThemeProvider = ({initialTheme, children}: ThemeProviderProps) => {
     }
 
     useEffect(() => {
-        rawSetTheme(theme)
+        const initialTheme = getInitialTheme();
+        
+        setTheme(initialTheme)
+    }, []);
+
+    useEffect(() => {
+        const initialTheme = getInitialTheme();
+
+        rawSetTheme(theme || initialTheme)
     }, [theme]);
 
     return (

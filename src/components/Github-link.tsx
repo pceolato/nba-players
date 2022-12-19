@@ -6,15 +6,16 @@ import Link from 'next/link';
 export function GithubLink() {
     return (
         <Link
-            href="https://github.com/pceolato/nba-players">
-                <Image
-                    className=""
-                    src="/github-logo.svg"
-                    alt="Logo github"
-                    width={32}
-                    height={32}
-                />
-
+            href="https://github.com/pceolato/nba-players"
+            target="_blank"
+        >
+            <Image
+                className=""
+                src="/github-logo.svg"
+                alt="Logo github"
+                width={32}
+                height={32}
+            />
         </Link>
     )
 }
