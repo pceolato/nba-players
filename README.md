@@ -20,6 +20,12 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 <br/>
 
+### 🔗 Deploy
+
+O deploy do projeto foi feito na a Vercel, você pode acessar e conferir acessando o link abaixo:
+
+- [Deploy - Vercel](https://nba-players.vercel.app)
+
 ---
 
 <br/>
