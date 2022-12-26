@@ -1,3 +1,4 @@
+'use client';
 import './global.css';
 
 import { DM_Sans } from '@next/font/google'
@@ -9,6 +10,7 @@ import { ThemeProvider } from '../contexts/ThemeContext';
 import { Toggle } from '../components/Toggle';
 import { GithubLink } from '../components/Github-link';
 import { Logo } from '../components/Logo';
+import { useEffect, useState } from 'react';
 
 const dmSans = DM_Sans({
   weight: ['400', '500', '700'],
@@ -20,11 +22,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect ( () => { 
+    setIsMounted ( true ) }, []) 
 
   return (
     <html className={dmSans.className || 'font-sans'}>
         <head />
         <body className="scrollbar-hide bg-body text-subtitle">
+          {isMounted && (
           <ThemeProvider>
             <header className="flex items-center justify-between max-w-5xl w-11/12 mx-auto pb-32 pt-4">
               <Logo />
@@ -44,6 +51,7 @@ export default function RootLayout({
               </p>
             </footer>
           </ThemeProvider>
+          )}
         </body>
     </html>
   )
