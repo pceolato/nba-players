@@ -30,7 +30,6 @@ O deploy do projeto foi feito na a Vercel, você pode acessar e conferir acessan
 
 <br/>
 
-<div style="display: flex; justify-content: space-between; width: 100%;">
-    <img style="" src="assets/nba-players-dark.png" width="45%;" alt="Imagem do projeto versão dark"/>
-    <img style="" src="assets/nba-players-light.png" width="45%;" alt="Imagem do projeto versão light"/>
+<div style="width: 100%;">
+    <img src="https://user-images.githubusercontent.com/88351152/209544734-e3d1423d-47bf-40f0-aa73-99b919f5a1c4.gif" alt="Ilustração do projeto"/>
 </div>
