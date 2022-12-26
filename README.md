@@ -31,5 +31,5 @@ O deploy do projeto foi feito na a Vercel, você pode acessar e conferir acessan
 <br/>
 
 <div style="width: 100%;">
-    <img src="https://user-images.githubusercontent.com/88351152/209544734-e3d1423d-47bf-40f0-aa73-99b919f5a1c4.gif" alt="Ilustração do projeto"/>
+    <img src="https://user-images.githubusercontent.com/88351152/209565215-cb429edc-89c0-488a-9446-b46915a46bec.gif" alt="Ilustração do projeto"/>
 </div>
