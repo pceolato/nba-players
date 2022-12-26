@@ -67,7 +67,7 @@ export default function Page() {
                     />
                 </div>
                 <button
-                    className="w-2/6 bg-orange-500 hover:bg-orange-100 text-title text-lg font-medium rounded p-4"
+                    className="w-2/6 bg-orange-500 hover:bg-orange-100 text-white text-lg font-medium rounded p-4"
                     onClick={getPlayers}
                 >
                     Buscar
