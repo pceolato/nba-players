@@ -14,7 +14,7 @@ export type TypeThemeContext = {
 const getInitialTheme = () => { 
     if(localStorage) {
 
-        const storePrefs = localStorage.getItem('color-theme');
+        const storePrefs = localStorage.getItem('@nba-players:color-theme');
         if(typeof storePrefs === 'string') {
             return storePrefs;
         }
