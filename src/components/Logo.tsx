@@ -11,21 +11,23 @@ export function Logo() {
         <Link
             href="/"
         >
-            {theme === 'dark' ?
+            {theme === 'dark' && (
                 <Image
                     src="/logo-white.svg"
                     alt="Logo NBA-PLAYERS"
                     width={81}
                     height={46}
                 />
-                : <Image
+            )}
+            
+            {theme === 'light' && (
+                <Image
                     src="/logo-black.svg"
                     alt="Logo NBA-PLAYERS"
                     width={81}
                     height={46}
                 />
-
-            }
+            )}
         </Link>
     )
 
