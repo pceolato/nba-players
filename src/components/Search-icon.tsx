@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image'
+import { MagnifyingGlass } from 'phosphor-react';
 import { useContext } from 'react';
 import { ThemeContext, TypeThemeContext } from '../contexts/ThemeContext';
 
@@ -9,18 +10,9 @@ export function SearchIcon() {
     return (
         <>
             {theme === 'dark' ?
-                <Image
-                    src="/search-icon-white.svg"
-                    alt="Logo NBA-PLAYERS"
-                    width={30}
-                    height={30}
-                />
-                : <Image
-                    src="/search-icon-black.svg"
-                    alt="Logo NBA-PLAYERS"
-                    width={30}
-                    height={30}
-                />
+                <MagnifyingGlass size={30} color="rgb(249 249 249 / 0.6)" />
+                : 
+                <MagnifyingGlass size={30} color="rgb(23 23 23 / 0.6)" />
 
             }
         </>

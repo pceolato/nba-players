@@ -14,7 +14,8 @@ import { useEffect, useState } from 'react';
 
 const dmSans = DM_Sans({
   weight: ['400', '500', '700'],
-  subsets: ['latin']
+  subsets: ['latin'],
+  variable: '--font-dmSans'
 })
 
 export default function RootLayout({
@@ -24,14 +25,15 @@ export default function RootLayout({
 }) {
   const [isMounted, setIsMounted] = useState(false)
 
-  useEffect ( () => { 
-    setIsMounted ( true ) }, []) 
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   return (
-    <html className={dmSans.className || 'font-sans'}>
-        <head />
-        <body className="scrollbar-hide bg-body text-subtitle">
-          {isMounted && (
+    <html>
+      <head />
+      {isMounted && (
+        <body className={`${dmSans.variable} scrollbar-hide bg-body text-subtitle font-sans`}>
           <ThemeProvider>
             <header className="flex items-center justify-between max-w-5xl w-11/12 mx-auto pb-32 pt-4">
               <Logo />
@@ -40,8 +42,8 @@ export default function RootLayout({
                 <NavLink href="/players" player>Jogador</NavLink>
               </nav>
               <div className="flex items-center gap-2">
-              <Toggle />
-              <GithubLink />
+                <Toggle />
+                <GithubLink />
               </div>
             </header>
             {children}
@@ -51,8 +53,8 @@ export default function RootLayout({
               </p>
             </footer>
           </ThemeProvider>
-          )}
         </body>
+      )}
     </html>
   )
 }

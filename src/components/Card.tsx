@@ -3,6 +3,8 @@
 
 import Link from 'next/link';
 
+import { DribbbleLogo } from 'phosphor-react';
+
 import { Player } from '../app/players/page';
 
 export function Card({name, team, id}: Player) {
@@ -16,12 +18,7 @@ export function Card({name, team, id}: Player) {
                         <h3 className="text-left text-xl text-title font-bold">{ name }</h3>
                         <p className="text-left">{ team }</p>
                     </div>
-                    <img
-                        src="/bool-blue.svg"
-                        alt="Bola de basquete azul"
-                        width={40}
-                        height={40}
-                    />
+                    <DribbbleLogo size={40} color="#17408B" />
                 </div>
             </Link>
         </button>

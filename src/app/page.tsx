@@ -3,6 +3,8 @@ import Link from 'next/link'
 
 import { Cards } from './list-card'
 
+import logoNBA from '../assets/logo-nba.svg'
+
 export default function Page() {
     return (
         <main className="max-w-5xl w-11/12 mx-auto">
@@ -29,7 +31,7 @@ export default function Page() {
                 </div>
 
                 <Image
-                    src="/logo-nba.svg"
+                    src={logoNBA}
                     alt="Logo NBA"
                     width={86}
                     height={180}

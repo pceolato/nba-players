@@ -1,8 +1,7 @@
 'use client';
 
-import Image from 'next/image';
-
 import { usePathname } from 'next/navigation';
+import { DribbbleLogo } from 'phosphor-react';
 import { useEffect, useState } from 'react';
 import { CardInfos } from './card-infos';
 
@@ -45,21 +44,9 @@ export default function Page()  {
     return (
         <div className="max-w-3xl w-11/12 m-auto flex flex-col">
             <header className="flex w-full justify-center md:justify-between items-center pb-9">
-                <Image
-                    className="hidden md:inline-block"
-                    src="/bool-red-lg.svg"
-                    alt="Icone de busca"
-                    width={70}
-                    height={70}
-                />
+                <DribbbleLogo size={86} color="#C9082A" className="hidden md:inline-block"/>
                 <h1 className="text-4xl text-title font-bold text-center">{player.name || '...'}</h1>
-                <Image
-                    className="hidden md:inline-block"
-                    src="/bool-blue-lg.svg"
-                    alt="Icone de busca"
-                    width={70}
-                    height={70}
-                />
+                <DribbbleLogo size={86} color="#17408B" className="hidden md:inline-block"/>
             </header>
             <div className="w-full bg-card border rounded">
                 <div className="p-6 flex flex-col gap-10">
