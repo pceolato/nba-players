@@ -5,6 +5,7 @@ import { Card } from '../../components/Card';
 
 import { Alert } from "@material-tailwind/react";
 import { SearchIcon } from '../../components/Search-icon';
+import { api } from '../../lib/axios';
 
 export interface Player {
     id: string;
@@ -27,10 +28,17 @@ export default function Page() {
                 return;
             }
 
-            fetch(`https://www.balldontlie.io/api/v1/players/?search=${trimPlayer}`)
-                .then(res => res.json())
-                .then(json => json.data.length <= 0 ? alert('jogador não encontrado') : json.data)
-                .then(data => setPlayers(data))
+            const response = await api.get('/players', {
+                params: {
+                    search: trimPlayer
+                }
+            })
+
+            const players = response.data
+
+            if(players.data.length <= 0) alert('jogador não encontrado')
+
+            setPlayers(players.data)
 
         } catch (err) {
             console.log(err)

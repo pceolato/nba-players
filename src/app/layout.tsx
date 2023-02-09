@@ -32,8 +32,8 @@ export default function RootLayout({
   return (
     <html>
       <head />
+      <body className={`${dmSans.variable} scrollbar-hide bg-body text-subtitle font-sans`}>
       {isMounted && (
-        <body className={`${dmSans.variable} scrollbar-hide bg-body text-subtitle font-sans`}>
           <ThemeProvider>
             <header className="flex items-center justify-between max-w-5xl w-11/12 mx-auto pb-32 pt-4">
               <Logo />
@@ -53,8 +53,8 @@ export default function RootLayout({
               </p>
             </footer>
           </ThemeProvider>
-        </body>
       )}
+      </body>
     </html>
   )
 }

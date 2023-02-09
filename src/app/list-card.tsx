@@ -1,5 +1,6 @@
 import { use } from "react";
 import { Card } from "../components/Card";
+import { api } from "../lib/axios";
 
 interface CardsProps {
     id: string;
@@ -12,11 +13,9 @@ interface CardsProps {
 
 async function getPlayers() {
     try {
-        const res = await fetch(`https://www.balldontlie.io/api/v1/players`);
-        const json = await res.json();
-    
-        return json.data;
+        const response = await api.get('/players');
 
+        return response.data.data;
     } catch (err) {
         console.log(err)
     }
@@ -24,10 +23,9 @@ async function getPlayers() {
 
 export function Cards() {
     const players =  use(getPlayers());
-    
     return (
             <div className="flex flex-wrap gap-8 mb-10">
-                {players.map((player: CardsProps) => (
+                {players?.map((player: CardsProps) => (
                     <Card 
                         key={player.id}
                         id={player.id}
